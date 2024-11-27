@@ -28,7 +28,7 @@ Proyek ini dikembangkan berdasarkan [AI Waifu (VTuber)](https://github.com/Jarik
 
 Untuk menjalankan proyek ini, Anda memerlukan:
 1. Instal Python 3.10.5 jika belum terinstal.
-2. Clone repositori dengan menjalankan `git clone https://github.com/JarikDem-Bot/ai-waifu.git`
+2. Clone repositori dengan menjalankan `git clone https://github.com/LIIVO/AI-WaifuSistant.git`
 3. Instal paket Python yang diperlukan dengan menjalankan `pip install -r requirements.txt` di direktori proyek.
 4. Buat berkas `.env` di dalam direktori proyek dan masukkan kunci API Anda.
     <details>
