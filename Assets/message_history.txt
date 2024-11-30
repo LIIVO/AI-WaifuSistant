@@ -1,0 +1,10 @@
+[
+    {
+        "role": "user",
+        "content": "[2024-11-30 08:10:02] Hello\n"
+    },
+    {
+        "role": "assistant",
+        "content": "[2024-11-30 08:10:05] Halo! Saya siap membantumu! (\u30ce\u25b2\u25bc\u30ce)\n"
+    }
+]
