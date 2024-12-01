@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waifu Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box">
+            <div id="chat-display" class="chat-display"></div>
+        </div>
+        <div class="input-section">
+            <input type="text" id="user-input" placeholder="Type your message..." class="input-field">
+            <button id="send-button" class="send-button">Send</button>
+            <button id="voice-button" class="voice-button">Voice</button>
+            <button id="voice-call-button" class="voice-call-button">Voice Call</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Send message
+        $('#send-button').click(function() {
+            var user_input = $('#user-input').val();
+            if (user_input) {
+                $.post('/send_message', {user_input: user_input}, function(data) {
+                    $('#chat-display').append('<div>You: ' + user_input + '</div>');
+                    $('#chat-display').append('<div>Waifu: ' + data.response + '</div>');
+                    $('#user-input').val('');
+                });
+            }
+        });
+
+        // Voice input (simulating with a button click for now)
+        $('#voice-button').click(function() {
+            $.post('/voice_input', {}, function(data) {
+                $('#chat-display').append('<div>Waifu: ' + data.response + '</div>');
+            });
+        });
+
+        // Toggle Voice Call
+        $('#voice-call-button').click(function() {
+            var talking_mode = $(this).text() === "Voice Call";
+            var buttonText = talking_mode ? "End Voice Call" : "Voice Call";
+
+            $.post('/talking_mode', {talking_mode: talking_mode}, function(data) {
+                $('#chat-display').append('<div>Waifu: ' + data.response + '</div>');
+                $('#voice-call-button').text(buttonText);
+            });
+        });
+    </script>
+</body>
+</html>
