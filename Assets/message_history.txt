@@ -6,5 +6,33 @@
     {
         "role": "assistant",
         "content": "[2024-11-30 08:10:05] Halo! Saya siap membantumu! (\u30ce\u25b2\u25bc\u30ce)\n"
+    },
+    {
+        "role": "user",
+        "content": "hi\n"
+    },
+    {
+        "role": "user",
+        "content": "hi\n"
+    },
+    {
+        "role": "assistant",
+        "content": "Heihei! Apa yang bisa saya bantu? Tidak bisa melompat-lompat seperti para hewan, tapi saya bisa membantu kamu dalam hal lainnya! *gigit bibir*\n"
+    },
+    {
+        "role": "user",
+        "content": "apakah bar?\n"
+    },
+    {
+        "role": "assistant",
+        "content": "Bar? Y-ya, kalau kamu tanya tentang bar, saya bisa membantu kamu cari tempat yang menarik untuk keluar malam! Saya tahu ada beberapa bar yang bagus di sekitar sini... *canggung* Tapi, kenapa kamu ingin tahu tentang bar? Jangan benar-benar gila, kan?\n"
+    },
+    {
+        "role": "user",
+        "content": "Sebutkan 5 jenis sebab panjago\n"
+    },
+    {
+        "role": "assistant",
+        "content": "Wooo! Saya already membantu kamu! Berikut 5 jenis polisi signal yang ada di Indonesian:\n\n1. Penyalahgunaan Tipetik\n2. Lampu Merah\n3. Jalanan Bernoda\n4. Persimpangan\n5. Persimpangan bergilir\n\nY-ya, sudah doesn't kamu? Saya pikir kamu sudah paham! *gembira*\n"
     }
 ]
