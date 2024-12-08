@@ -1,0 +1,103 @@
+2024-12-01 15:04:10,529 - WARNING -  * Debugger is active!
+2024-12-01 15:04:10,534 - INFO -  * Debugger PIN: 245-605-918
+2024-12-01 15:05:00,888 - INFO - 127.0.0.1 - - [01/Dec/2024 15:05:00] "[35m[1mPOST /send_message HTTP/1.1[0m" 500 -
+2024-12-01 15:07:57,094 - INFO - 127.0.0.1 - - [01/Dec/2024 15:07:57] "[35m[1mPOST /send_message HTTP/1.1[0m" 500 -
+2024-12-01 15:08:04,580 - INFO - 127.0.0.1 - - [01/Dec/2024 15:08:04] "[33mPOST /voice_input HTTP/1.1[0m" 404 -
+2024-12-01 15:08:18,966 - INFO - 127.0.0.1 - - [01/Dec/2024 15:08:18] "POST /talking_mode HTTP/1.1" 200 -
+2024-12-01 15:08:18,979 - INFO - 127.0.0.1 - - [01/Dec/2024 15:08:18] "[33mGET /cdn-cgi/styles/main.css HTTP/1.1[0m" 404 -
+2024-12-01 15:12:41,140 - INFO - 127.0.0.1 - - [01/Dec/2024 15:12:41] "GET / HTTP/1.1" 200 -
+2024-12-01 15:12:42,057 - INFO - 127.0.0.1 - - [01/Dec/2024 15:12:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-01 15:12:50,545 - INFO - 127.0.0.1 - - [01/Dec/2024 15:12:50] "[35m[1mPOST /send_message HTTP/1.1[0m" 500 -
+2024-12-01 15:16:13,895 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-01 15:16:13,911 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-01 15:16:13,915 - INFO -  * Restarting with stat
+2024-12-01 15:16:17,405 - WARNING -  * Debugger is active!
+2024-12-01 15:16:17,418 - INFO -  * Debugger PIN: 245-605-918
+2024-12-01 15:16:23,865 - INFO - 127.0.0.1 - - [01/Dec/2024 15:16:23] "GET / HTTP/1.1" 200 -
+2024-12-01 15:16:25,369 - INFO - 127.0.0.1 - - [01/Dec/2024 15:16:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-01 15:16:38,021 - INFO - 127.0.0.1 - - [01/Dec/2024 15:16:38] "[35m[1mPOST /send_message HTTP/1.1[0m" 500 -
+2024-12-01 15:16:38,375 - INFO - 127.0.0.1 - - [01/Dec/2024 15:16:38] "[35m[1mPOST /send_message HTTP/1.1[0m" 500 -
+2024-12-01 15:18:58,917 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-01 15:18:58,917 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-01 15:18:58,921 - INFO -  * Restarting with stat
+2024-12-01 15:19:01,531 - WARNING -  * Debugger is active!
+2024-12-01 15:19:01,540 - INFO -  * Debugger PIN: 245-605-918
+2024-12-01 15:19:10,844 - INFO - 127.0.0.1 - - [01/Dec/2024 15:19:10] "[35m[1mPOST /send_message HTTP/1.1[0m" 500 -
+2024-12-01 15:19:13,733 - INFO - 127.0.0.1 - - [01/Dec/2024 15:19:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-01 15:20:12,827 - INFO -  * Detected change in 'E:\\Desktop\\IoT_Project\\AI-WaifuSistant\\Controller\\waifu.py', reloading
+2024-12-01 15:20:13,189 - INFO -  * Restarting with stat
+2024-12-01 15:20:17,671 - WARNING -  * Debugger is active!
+2024-12-01 15:20:17,680 - INFO -  * Debugger PIN: 245-605-918
+2024-12-01 15:20:31,427 - INFO - 127.0.0.1 - - [01/Dec/2024 15:20:31] "[35m[1mPOST /send_message HTTP/1.1[0m" 500 -
+2024-12-01 15:20:31,910 - INFO - 127.0.0.1 - - [01/Dec/2024 15:20:31] "[35m[1mPOST /send_message HTTP/1.1[0m" 500 -
+2024-12-07 17:13:21,630 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-07 17:13:21,648 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-07 17:13:21,650 - INFO -  * Restarting with stat
+2024-12-07 17:13:22,740 - WARNING -  * Debugger is active!
+2024-12-07 17:13:22,742 - INFO -  * Debugger PIN: 118-397-831
+2024-12-07 17:14:29,145 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-07 17:14:29,145 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-07 17:14:29,147 - INFO -  * Restarting with stat
+2024-12-07 17:14:30,168 - WARNING -  * Debugger is active!
+2024-12-07 17:14:30,171 - INFO -  * Debugger PIN: 118-397-831
+2024-12-07 17:15:50,896 - INFO - 127.0.0.1 - - [07/Dec/2024 17:15:50] "GET / HTTP/1.1" 200 -
+2024-12-07 17:15:51,035 - INFO - 127.0.0.1 - - [07/Dec/2024 17:15:51] "GET /static/style.css HTTP/1.1" 200 -
+2024-12-07 17:15:51,301 - INFO - 127.0.0.1 - - [07/Dec/2024 17:15:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-07 17:16:33,452 - INFO - 127.0.0.1 - - [07/Dec/2024 17:16:33] "POST /send_message HTTP/1.1" 200 -
+2024-12-07 17:17:00,537 - INFO - 127.0.0.1 - - [07/Dec/2024 17:17:00] "POST /send_message HTTP/1.1" 200 -
+2024-12-07 17:17:46,936 - INFO - 127.0.0.1 - - [07/Dec/2024 17:17:46] "POST /send_message HTTP/1.1" 200 -
+2024-12-07 17:18:32,811 - INFO - 127.0.0.1 - - [07/Dec/2024 17:18:32] "[33mPOST /voice_input HTTP/1.1[0m" 404 -
+2024-12-07 17:20:35,312 - INFO - 127.0.0.1 - - [07/Dec/2024 17:20:35] "POST /talking_mode HTTP/1.1" 200 -
+2024-12-07 17:22:02,442 - INFO - 127.0.0.1 - - [07/Dec/2024 17:22:02] "POST /talking_mode HTTP/1.1" 200 -
+2024-12-07 17:31:58,648 - INFO - 127.0.0.1 - - [07/Dec/2024 17:31:58] "POST /talking_mode HTTP/1.1" 200 -
+2024-12-07 19:38:35,480 - INFO -  * Detected change in 'E:\\Desktop\\IoT_Project\\AI-WaifuSistant\\app.py', reloading
+2024-12-07 19:38:46,343 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-07 19:38:46,343 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-07 19:38:46,345 - INFO -  * Restarting with stat
+2024-12-07 19:38:47,256 - WARNING -  * Debugger is active!
+2024-12-07 19:38:47,258 - INFO -  * Debugger PIN: 118-397-831
+2024-12-07 19:48:25,301 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-07 19:48:25,302 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-07 19:48:25,303 - INFO -  * Restarting with stat
+2024-12-07 19:48:26,219 - WARNING -  * Debugger is active!
+2024-12-07 19:48:26,222 - INFO -  * Debugger PIN: 118-397-831
+2024-12-07 19:48:30,917 - INFO - 127.0.0.1 - - [07/Dec/2024 19:48:30] "GET / HTTP/1.1" 200 -
+2024-12-07 19:48:31,060 - INFO - 127.0.0.1 - - [07/Dec/2024 19:48:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-07 19:48:45,496 - INFO - 127.0.0.1 - - [07/Dec/2024 19:48:45] "[35m[1mPOST /send_message HTTP/1.1[0m" 500 -
+2024-12-07 19:49:55,641 - INFO -  * Detected change in 'E:\\Desktop\\IoT_Project\\AI-WaifuSistant\\app.py', reloading
+2024-12-07 19:49:55,738 - INFO -  * Restarting with stat
+2024-12-07 19:49:56,877 - WARNING -  * Debugger is active!
+2024-12-07 19:49:56,880 - INFO -  * Debugger PIN: 118-397-831
+2024-12-07 19:51:57,379 - INFO -  * Detected change in 'E:\\Desktop\\IoT_Project\\AI-WaifuSistant\\app.py', reloading
+2024-12-07 19:51:57,505 - INFO -  * Restarting with stat
+2024-12-07 19:54:52,505 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2024-12-08 10:38:24,439 - ERROR - Error in send_message: Incorrect API key provided: zu-8ca9a***********************3966. You can find your API key at https://platform.openai.com/account/api-keys.
+2024-12-08 10:41:10,171 - ERROR - Error in send_message: a coroutine was expected, got 'Apakah ada yang salah? Maaf, saya tidak paham apa yang kamu bicarakan. Ingat, kamu bisa mengulangi jika kamu butuh membicarakan sesuatu!'
+2024-12-08 10:44:24,275 - ERROR - Error in send_message: object str can't be used in 'await' expression
+2024-12-08 14:30:26,401 - ERROR - Error in send_message: Incorrect API key provided: zu-8ca9a***********************3966. You can find your API key at https://platform.openai.com/account/api-keys.
+2024-12-08 14:30:38,349 - ERROR - Error in send_message: Incorrect API key provided: zu-8ca9a***********************3966. You can find your API key at https://platform.openai.com/account/api-keys.
+2024-12-08 14:41:13,793 - ERROR - Error in talking_mode: object str can't be used in 'await' expression
+2024-12-08 16:15:12,139 - ERROR - Error in talking_mode: The provider sent an invalid response. {
+    "error": {
+        "message": "The provider sent an invalid response.",
+        "type": "error",
+        "discord": "https://discord.gg/zukijourney",
+        "param": null,
+        "code": null
+    }
+} 500 {'error': {'message': 'The provider sent an invalid response.', 'type': 'error', 'discord': 'https://discord.gg/zukijourney', 'param': None, 'code': None}} {'Date': 'Sun, 08 Dec 2024 09:15:11 GMT', 'Content-Type': 'application/json', 'Content-Length': '207', 'Connection': 'keep-alive', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=W%2FHk%2FmFw%2B95cCtDa1Jn8D4CLhwrzerL0Ta1DE5iQON8hfGtV2Br4X9D3XUUScJ1XtlsaAcc08Tw4h8OW4jUbdvs679CgFvjB33GpPkci1Ovv42jeYugco2ntUcK%2FGh63k7V4yO8t"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '8eeba6005c3b01e5-SIN', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&rtt=30010&min_rtt=14664&rtt_var=25324&sent=2118&recv=3710&lost=0&retrans=0&sent_bytes=8296&recv_bytes=5140755&delivery_rate=256836&cwnd=237&unsent_bytes=0&cid=7a83b381e0afaa8f&ts=118310&x=0"'}
+2024-12-08 17:50:15,819 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2024-12-08 19:32:28,814 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2024-12-08 20:26:16,736 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2024-12-08 20:26:47,693 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2024-12-08 20:26:51,568 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)

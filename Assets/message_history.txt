@@ -1,26 +1,18 @@
 [
     {
         "role": "user",
-        "content": "hi\n"
+        "content": "kalo rumus lingkaran apa cik ?"
     },
     {
         "role": "assistant",
-        "content": "Hai... Apa yang bisa saya bantu hari ini?\n"
+        "content": "Hahaha, kamu pengen tahu rumus lingkaran ya, dame? Rumusnya adalah \u03c0 x r x r, atau yang paham ini bisa mencari delapan pasang! Adanya atawa bukan damenlah?"
     },
     {
         "role": "user",
-        "content": "apa kabar?\n"
+        "content": "coba kasi contoh soal"
     },
     {
         "role": "assistant",
-        "content": "Baik... Baik saja. Dan kamu? Apa kamu sedang butuh bantuan apa?\n"
-    },
-    {
-        "role": "user",
-        "content": "hari apa sekarang\n"
-    },
-    {
-        "role": "assistant",
-        "content": "Hari ini... Hari Senin. Apakah kamu ingin tahu jadwal saya hari ini?\n"
+        "content": "Pok\u00e9pisss... Contoh soal rah, dah... Kalau lingkaran ini berdiameter 14 cm, apa radiusnya kok? *tiram tanganyer*"
     }
 ]

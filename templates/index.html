@@ -4,52 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waifu Chat</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <div class="chat-container">
-        <div class="chat-box">
-            <div id="chat-display" class="chat-display"></div>
-        </div>
-        <div class="input-section">
-            <input type="text" id="user-input" placeholder="Type your message..." class="input-field">
-            <button id="send-button" class="send-button">Send</button>
-            <button id="voice-button" class="voice-button">Voice</button>
-            <button id="voice-call-button" class="voice-call-button">Voice Call</button>
-        </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+<body class="h-screen">
+  <!-- Chat and Character Container -->
+  <div class="flex h-full">
+    <!-- Character Placeholder Section -->
+    <div class="w-1/4 bg-gray-300 flex items-center justify-center rounded-lg m-4">
+      <span class="text-red-500 text-lg font-bold">Character Placeholder</span>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        // Send message
-        $('#send-button').click(function() {
-            var user_input = $('#user-input').val();
-            if (user_input) {
-                $.post('/send_message', {user_input: user_input}, function(data) {
-                    $('#chat-display').append('<div>You: ' + user_input + '</div>');
-                    $('#chat-display').append('<div>Waifu: ' + data.response + '</div>');
-                    $('#user-input').val('');
-                });
-            }
-        });
+    <!-- Chat Section -->
+    <div class="w-3/4 flex flex-col rounded-r-lg p-4">
+      <!-- Header -->
+      <div class="flex items-center justify-between bg-gray-300 p-4 rounded-t-lg">
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 bg-gray-500 rounded-full">
+            <img src="{{ url_for('static', path='img/active.png') }}" class="rounded-full">
+          </div>
+          <div>
+            <h2 class="font-semibold">Slaviani Dusicanovich Sofiya (Slavus)</h2>
+            <p id="api-status" class="text-sm text-gray-600"></p>
+            <script src="{{ url_for('static', path='function.js') }}"></script>
+          </div>
+        </div>
+        <button class="w-8 h-8 flex items-center justify-center" id="voice-call-button">
+          <span class="material-icons"><i class="fa-solid fa-phone"></i></span>
+        </button>
+      </div>
+      <!-- Chat Body -->
+      <div id="chat-display" class="flex-grow p-4 space-y-4 overflow-y-auto bg-gray-200 flex flex-col justify-start">
+        <!-- Dynamic chat messages will appear here -->
+      </div>
+      <!-- Input Section -->
+      <div class="flex items-center bg-gray-300 p-3 rounded-b-lg">
+        <div class="w-full flex items-center bg-gray-200 p-2 rounded-lg">
+          <span class="material-icons text-gray-500"><i class="fa-solid fa-message m-1"></i></span>
+          <input 
+            type="text" 
+            id="user-input" 
+            placeholder="Type your message..." 
+            class="bg-transparent w-full pl-2 outline-none"
+          />
+          <button id="send-button">
+            <span class="material-icons text-gray-500"><i class="fa-solid fa-paper-plane m-1"></i></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        // Voice input (simulating with a button click for now)
-        $('#voice-button').click(function() {
-            $.post('/voice_input', {}, function(data) {
-                $('#chat-display').append('<div>Waifu: ' + data.response + '</div>');
-            });
-        });
+  <script src="{{ url_for('static', path='function.js') }}"></script>
 
-        // Toggle Voice Call
-        $('#voice-call-button').click(function() {
-            var talking_mode = $(this).text() === "Voice Call";
-            var buttonText = talking_mode ? "End Voice Call" : "Voice Call";
-
-            $.post('/talking_mode', {talking_mode: talking_mode}, function(data) {
-                $('#chat-display').append('<div>Waifu: ' + data.response + '</div>');
-                $('#voice-call-button').text(buttonText);
-            });
-        });
-    </script>
 </body>
 </html>
