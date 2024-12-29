@@ -1,62 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waifu Chat</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-<body class="h-screen">
-  <!-- Chat and Character Container -->
-  <div class="flex h-full">
-    <!-- Character Placeholder Section -->
-    <div class="w-1/4 bg-gray-300 flex items-center justify-center rounded-lg m-4">
-      <span class="text-red-500 text-lg font-bold">Character Placeholder</span>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', path='style_index.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+    
+        <title>AI-WaifuSistant</title>
+</head>
 
-    <!-- Chat Section -->
-    <div class="w-3/4 flex flex-col rounded-r-lg p-4">
-      <!-- Header -->
-      <div class="flex items-center justify-between bg-gray-300 p-4 rounded-t-lg">
-        <div class="flex items-center space-x-3">
-          <div class="w-8 h-8 bg-gray-500 rounded-full">
-            <img src="{{ url_for('static', path='img/active.png') }}" class="rounded-full">
+<body>
+    <section class="min-h-screen bg-gray-900 text-center py-20 px-8 xl:px-0 flex flex-col justify-center">
+        <span class="text-gray-400 text-sm max-w-lg mx-auto mb-2 capitalize flex items-center">Landbouw Engineering Informatic Virtualizing Organization <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-indigo-600 ml-2 w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+        </svg>
+    </span>
+    <h1 id="app" class="text-white text-4xl md:text-5xl xl:text-6xl font-semibold max-w-8xl mx-auto mb-16 leading-snug"></h1>
+    <script src="{{ url_for('static', path='typewriter.js') }}"></script>
+        <div class="grid-offer text-left grid sm:grid-cols-2 md:grid-cols-2 gap-5 max-w-5xl mx-auto">
+            <div class="card bg-gray-800 p-10 relative sm:row-span-2" style="height: auto; min-height: 350px;">
+                <div class="circle"></div>
+              <div class="relative max-h-96 lg:pr-52">
+                <a href="{{ url_for('chat') }}"><h2 class="capitalize text-white mb-4 text-2xl xl:text-3xl">Start <br /> Chatting</h2></a>
+                <p class="text-gray-400">Mulai obrolan santai dengan chatbot waifu yang ramah, menyenangkan, dan siap menemani anda setiap saat.</p>
+              </div>
+              <div class="icon"></div>
+            </div>
+            <div class="card bg-gray-800 p-10 relative">
+              <div class="circle"></div>
+              <div class="relative lg:pl-48">
+                <a href="{{ url_for('dashboard') }}"><h2 class="capitalize text-white mb-4 text-2xl xl:text-3xl">Technical <br /> dashboard</h2></a>
+                <p class="text-gray-400">Atur Konfigurasi Enviroment, Analisa Error dengan Log serta riwayat penggunaan dan Personalisasi AI Bot. </p>
+              </div>
+            </div>
+            <div class="card bg-gray-800 p-10 relative">
+                <div class="circle"></div>
+                <div class="relative lg:pl-0 lg:pr-48">
+                  <a href="https://github.com/LIIVO" target="_blank" rel="noopener noreferrer"><h2 class="capitalize text-white mb-4 text-2xl xl:text-3xl">LIIVO<br /> Project's</h2></a>
+                  <p class="text-gray-400">Kepoin dapur belakang kami dalam pengembangan projek ini, serta projek-projek lain kami!</p>
+                </div>
+              </div>
+              <script>
+                const imageUrl = '{{ url_for("static", path="img/nav-about.png") }}';
+        
+                document.addEventListener('DOMContentLoaded', function () {
+                    const circleElement = document.querySelector('.card:nth-child(3) .circle');
+                    circleElement.style.background = `url(${imageUrl}) no-repeat 50% 0%/cover`;
+                });
+            </script>
           </div>
-          <div>
-            <h2 class="font-semibold">Slaviani Dusicanovich Sofiya (Slavus)</h2>
-            <p id="api-status" class="text-sm text-gray-600"></p>
-            <script src="{{ url_for('static', path='function.js') }}"></script>
-          </div>
-        </div>
-        <button class="w-8 h-8 flex items-center justify-center" id="voice-call-button">
-          <span class="material-icons"><i class="fa-solid fa-phone"></i></span>
-        </button>
-      </div>
-      <!-- Chat Body -->
-      <div id="chat-display" class="flex-grow p-4 space-y-4 overflow-y-auto bg-gray-200 flex flex-col justify-start">
-        <!-- Dynamic chat messages will appear here -->
-      </div>
-      <!-- Input Section -->
-      <div class="flex items-center bg-gray-300 p-3 rounded-b-lg">
-        <div class="w-full flex items-center bg-gray-200 p-2 rounded-lg">
-          <span class="material-icons text-gray-500"><i class="fa-solid fa-message m-1"></i></span>
-          <input 
-            type="text" 
-            id="user-input" 
-            placeholder="Type your message..." 
-            class="bg-transparent w-full pl-2 outline-none"
-          />
-          <button id="send-button">
-            <span class="material-icons text-gray-500"><i class="fa-solid fa-paper-plane m-1"></i></span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="{{ url_for('static', path='function.js') }}"></script>
-
 </body>
 </html>

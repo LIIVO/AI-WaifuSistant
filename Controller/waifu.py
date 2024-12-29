@@ -4,7 +4,10 @@ import edge_tts
 import sounddevice as sd
 import soundfile as sf
 import logging
+import numpy as np
 
+from pydub import AudioSegment
+from pydub.playback import play
 from threading import Thread
 from functools import lru_cache
 from os import getenv, path
@@ -74,11 +77,16 @@ class Waifu:
                 with open(self.chatbot_personality_file, 'r') as f:
                     personality = f.read().strip()
             else:
-                personality = "You are an AI assistant designed to help users in a friendly and informative way."
+                personality = (
+                    "You are an AI assistant designed to operate with precision and minimalism. "
+                    "Respond succinctly, prioritize actions over words, and maintain a calm, focused demeanor."
+                )
             self.context = [{'role': 'system', 'content': personality}]
         except Exception as e:
             logger.error(f"Error loading personality: {e}")
-            self.context = [{'role': 'system', 'content': "You are an AI assistant."}]
+            self.context = [{'role': 'system', 'content': (
+                "You are an AI assistant. Be precise, minimalistic, and action-oriented."
+            )}]
 
     def __load_message_history(self) -> None:
         """Load message history from a file, if it exists."""
@@ -162,11 +170,24 @@ class Waifu:
 
     @staticmethod
     def __play_audio(file_path: str, output_device: int = None) -> None:
-        """Play audio using the specified output device."""
-        data, fs = sf.read(file_path)
-        sd.play(data, fs, device=output_device)  # Tentukan perangkat output
-        sd.wait()
+        """Play audio with pitch adjustment."""
+        # Load audio file
+        audio = AudioSegment.from_file(file_path)
 
+        octaves = 0.1  # Ini Setting Pitch
+        new_sample_rate = int(audio.frame_rate * (2.0 ** octaves))
+        high_pitch_audio = audio._spawn(audio.raw_data, overrides={"frame_rate": new_sample_rate}).set_frame_rate(44100)
+
+        # Convert to NumPy array for sounddevice playback
+        audio_data = np.array(high_pitch_audio.get_array_of_samples())
+        channels = high_pitch_audio.channels
+        if channels > 1:
+            audio_data = audio_data.reshape((-1, channels))
+
+        # Play the audio using sounddevice
+        sd.play(audio_data, samplerate=high_pitch_audio.frame_rate, device=output_device)
+        sd.wait() 
+        
     def __whisper_sr(self, audio) -> str:
         """Transcribe speech using Whisper."""
         with open('./Assets/speech.wav', 'wb') as f:

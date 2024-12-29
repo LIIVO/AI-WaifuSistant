@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body class="bg-gray-100">
+    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <div class="px-3 py-3 lg:px-5 lg:pl-3">
+            <h1 class="text-lg font-bold text-gray-700 dark:text-white">AI-WaifuSistant Config's</h1>
+        </div>
+    </nav>
+
+    <aside class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <div class="h-full px-3 pb-4 overflow-y-auto">
+            <ul class="space-y-2">
+                <li>
+                    <a href="#" onclick="showSection('edit-env')" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="fa-solid fa-gear fa-lg text-gray-500 dark:text-gray-400"></i>
+                        </div>
+                        <div class="ml-3">.env</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="showSection('edit-personality')" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="fa-solid fa-person fa-lg text-gray-500 dark:text-gray-400"></i>
+                        </div>
+                        <div class="ml-3">Personality</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="showSection('error-log')" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="fa-solid fa-note-sticky fa-lg text-gray-500 dark:text-gray-400"></i>
+                        </div>
+                        <div class="ml-3">Error Log</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="showSection('message-history')" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="fa-solid fa-clock-rotate-left fa-lg text-gray-500 dark:text-gray-400"></i>
+                        </div>
+                        <div class="ml-3">Message History</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="showSection('mp3-files')" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="fa-solid fa-headphones fa-lg text-gray-500 dark:text-gray-400"></i>
+                        </div>
+                        <div class="ml-3">Audio Log</div>
+                    </a>
+                </li>
+            </ul>                      
+        </div>
+    </aside>
+
+    <main class="ml-64 pt-20 p-6">
+        <div id="edit-env" class="hidden">
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Edit .env</h2>
+                <div id="env-container"></div>
+                <button type="button" onclick="addNewEnv()" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 mb-4">
+                    Add New Variable
+                </button>
+                <button type="button" onclick="saveEnv()" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+                    Save
+                </button>
+            </div>
+                          
+        </div>
+
+        <div id="edit-personality" class="hidden">
+            <h2 class="text-2xl font-bold mb-4">Edit Personality</h2>
+            <form id="personality-form">
+                <textarea id="personality-content" rows="10" class="w-full p-2 border rounded mb-4"></textarea><br>
+                <button type="button" onclick="savePersonality()" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Save</button>
+            </form>
+        </div>
+
+        <div id="error-log" class="hidden">
+            <h2 class="text-2xl font-bold mb-4">Error Log</h2>
+            <div id="error-log-content" class="bg-gray-100 p-4 border rounded overflow-auto max-h-96 whitespace-pre-wrap"></div>
+        </div>
+
+        <div id="message-history" class="hidden">
+            <h2 class="text-2xl font-bold mb-4">Message History</h2>
+            <div id="message-history-content" class="bg-gray-100 p-4 border rounded"></div>
+        </div>
+
+        <div id="mp3-files" class="hidden">
+            <h2 class="text-2xl font-bold mb-4">Play MP3 Files</h2>
+            <ul id="mp3-files-list" class="list-disc pl-5"></ul>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', path='admin.js') }}"></script>
+
+</body>
+</html>
+

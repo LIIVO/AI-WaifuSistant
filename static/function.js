@@ -1,4 +1,10 @@
 // Send message
+$('#user-input').keypress(function (e) {
+    if (e.which === 13) { // 13 is the key code for Enter
+        $('#send-button').click();
+    }
+});
+
 $('#send-button').click(function () {
     const userInput = $('#user-input').val().trim();
     if (userInput) {
@@ -7,7 +13,7 @@ $('#send-button').click(function () {
         // Display the user's message immediately
         $('#chat-display').append(`
             <div class="self-end bg-blue-500 text-white p-3 rounded-lg max-w-xs">
-                You: ${userInput}
+                ${userInput}
             </div>
         `);
 
@@ -23,7 +29,7 @@ $('#send-button').click(function () {
                 // Display the bot's response after receiving it
                 $('#chat-display').append(`
                     <div class="self-start bg-gray-300 p-3 rounded-lg max-w-xs">
-                        Waifu: ${data.response}
+                        ${data.response}
                     </div>
                 `);
                 $('#chat-display').scrollTop($('#chat-display')[0].scrollHeight); // Scroll to show the bot's response

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waifu Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+  </head>
+  <body class="h-screen">
+    <!-- Chat and Character Container -->
+    <div class="flex h-full">
+          <!-- Character Placeholder Section -->
+    <div class="w-1/4 bg-gray-300 flex items-center justify-center rounded-lg m-4">
+      <span class="text-red-500 text-lg font-bold">Character Placeholder</span>
+    </div>
+      <!-- Main Chat Section -->
+      <div class="flex-grow flex flex-col rounded-lg p-4 relative bg-gray-100">
+        <!-- Header -->
+        <div class="group flex items-center justify-between bg-gray-300 p-4 rounded-t-lg" id="header">
+          <div id="profile" class="flex items-center space-x-3 cursor-pointer group-hover:select-none">
+            <div class="w-8 h-8 bg-gray-500 rounded-full cursor">
+              <img src="{{ url_for('static', path='img/active.png') }}" class="rounded-full">
+            </div>
+            <div>
+              <h2 class="font-semibold">Slaviani Dusicanovich Sofiya (Slavus)</h2>
+              <p id="api-status" class="text-sm text-gray-600"></p>
+              <script src="{{ url_for('static', path='function.js') }}"></script>
+            </div>
+          </div>
+          <button class="w-8 h-8 flex items-center justify-center">
+            <span class="material-icons"><i class="fa-solid fa-phone"></i></span>
+          </button>
+        </div>
+  
+        <!-- Chat Body -->
+        <div id="chat-display" class="flex-grow p-4 space-y-4 overflow-y-auto bg-gray-200 flex flex-col justify-start">
+          <!-- Dynamic chat messages will appear here -->
+        </div>
+  
+        <!-- Input Section -->
+        <div class="flex items-center bg-gray-300 p-3 rounded-b-lg">
+          <div class="w-full flex items-center bg-gray-200 p-2 rounded-lg">
+            <span class="material-icons text-gray-500"><i class="fa-solid fa-message m-1"></i></span>
+            <input 
+              type="text" 
+              id="user-input" 
+              placeholder="Type your message..." 
+              class="bg-transparent w-full pl-2 outline-none"
+            />
+            <button id="send-button">
+              <span class="material-icons text-gray-500"><i class="fa-solid fa-paper-plane m-1"></i></span>
+            </button>
+          </div>
+        </div>
+        </div>
+        <div id="sidebar" class="hidden w-1/4 bg-gray-300 flex items-center justify-center rounded-lg m-4">
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', path='function.js') }}"></script>
+    <script>
+      // JavaScript to toggle sidebar visibility
+      document.getElementById('profile').addEventListener('click', () => {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('hidden');
+      });
+  
+      // Close sidebar when the close button is clicked
+      document.getElementById('close-sidebar').addEventListener('click', () => {
+        document.getElementById('sidebar').classList.add('hidden');
+      });
+    </script>
+  </body>
+  
+</html>
