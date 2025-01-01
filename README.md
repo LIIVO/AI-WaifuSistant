@@ -2,7 +2,7 @@
 
 # Kilas
 
-Proyek ini dikembangkan berdasarkan [AI Waifu (VTuber)](https://github.com/JarikDem-Bot/ai-waifu) yang akan diimplementasikan dalam perangkat IoT berbasis Arduino. Berfungsi sebagai asisten suara dengan wujud karakter anime, memberikan pengalaman interaksi langsung dengan karakter anime.
+Proyek ini merupakan pengembangan lebih lanjut [AI Waifu (VTuber)](https://github.com/JarikDem-Bot/ai-waifu). Berfungsi sebagai asisten suara dengan wujud karakter anime, memberikan pengalaman interaksi langsung dengan karakter anime. Dengan basis karakter menggunakan VTubeStudio.
 
 ## Fitur
 
@@ -52,10 +52,9 @@ Untuk menjalankan proyek ini, Anda memerlukan:
       - Pilih input dan output untuk `Mouth Open`. Opsional, Anda dapat mengatur "breathing" untuk gerakan diam.
 
         <img src='https://github.com/JarikDem-Bot/ai-waifu/assets/73791422/4e7341b1-91a8-48f9-94e4-b5669163c89b' width='50%'>
-
     </details>
 
-7. Atur konfigurasi yang diperlukan di `main.py` dalam fungsi `waifu.initialize`.
+7. Atur konfigurasi yang diperlukan di `app.py` dalam fungsi `waifu.initialize`.
     <details>
       <summary>Argumen:</summary>
       
@@ -66,7 +65,6 @@ Untuk menjalankan proyek ini, Anda memerlukan:
           - `None` atau tidak disebutkan - nilai default adalah `"whisper"`.
       - `stt_duration` (float) - durasi maksimum (dalam detik) untuk pengenalan suara. Default: `0.5`.
       - `mic_index` (int) - indeks perangkat mikrofon untuk input suara. Default: mikrofon utama.
-
       - `chatbot_service` (str) - layanan untuk menghasilkan respons.
           - `"openai"` - layanan teks OpenAI; berbayar, membutuhkan kunci API OpenAI.
           - `"test"` - pesan prewritten untuk pengujian.
@@ -74,7 +72,6 @@ Untuk menjalankan proyek ini, Anda memerlukan:
       - `chatbot_model` (str) - model untuk teks. Daftar tersedia dapat dilihat [di sini](https://platform.openai.com/docs/models/overview). Default: `"gpt-3.5-turbo"`.
       - `chatbot_temperature` (float) - tingkat kreativitas teks yang dihasilkan. Default: `0.5`.
       - `personality_file` (str) - path relatif ke berkas teks kepribadian Waifu. Default: `"personality.txt"`.
-        
       - `tts_service` (str) - layanan text-to-speech.
           - `"google"` - Google tts gratis dengan suara sederhana.
           - `"elevenlabs"` - ElevenLabs tts berkualitas tinggi; berbayar, membutuhkan kunci API ElevenLabs.
@@ -83,7 +80,6 @@ Untuk menjalankan proyek ini, Anda memerlukan:
       - `output_device` - (int) ID perangkat output atau (str) nama perangkat output. Untuk VB-Cable, pilih perangkat dengan awalan `CABLE Input (VB-Audio Virtual`.
       - `tts_voice` (str) - nama suara ElevenLabs. Default: `"Elli"`.
       - `tts_model` (str) - model ElevenLabs. Rekomendasi: `"eleven_monolingual_v1"` atau `"eleven_multilingual_v1"`. Default: `"eleven_monolingual_v1"`.
-
     </details>
 
 8. Jalankan proyek dengan menjalankan `python main.py` di direktori proyek.
@@ -99,4 +95,4 @@ Untuk menjalankan proyek ini, Anda memerlukan:
 
 ## Lisensi
 
-[MIT](/LICENSE)
+MIT
