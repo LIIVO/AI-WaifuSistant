@@ -4,6 +4,7 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
+
 from dotenv import dotenv_values, set_key
 from Controller.waifu import Waifu
 
@@ -35,7 +36,7 @@ waifu.initialize(
     personality_file='Assets/personality.txt',
     tts_service='edge',
     output_device=7,
-    tts_voice='ja-JP-NanamiNeural'
+    tts_voice='id-ID-GadisNeural'
 )
 
 @app.get("/")
@@ -67,23 +68,51 @@ async def send_message(user_input: str = Form(...)):
     except Exception as e:
         logger.error(f"Error in send_message: {str(e)}")
         raise HTTPException(status_code=500, detail="Failed to process the request.")
+    
+talking_mode_active = False
 
-@app.post("/talking_mode")
-async def talking_mode(talking_mode: bool = Form(...)):
+@app.post("/talking_mode_poll")
+async def talking_mode_poll(talking_mode: bool = Form(...)):
     """
-    Endpoint untuk mode percakapan suara dengan Waifu.
+    Enable or disable talking mode and handle polling.
     """
-    try:
-        if talking_mode:
-            user_input = waifu.get_user_input()  # Jika ini synchronous, tidak perlu await
-            response = waifu.get_chatbot_response(user_input)  # Pastikan ini coroutine
-            await waifu.tts_say(response)  # Pastikan ini coroutine
-            return JSONResponse({"response": response})
-        else:
-            return JSONResponse({"response": "Talking mode deactivated."})
-    except Exception as e:
-        logger.error(f"Error in talking_mode: {str(e)}")
-        raise HTTPException(status_code=500, detail="Failed to toggle talking mode.")
+    global talking_mode_active
+
+    if talking_mode:
+        talking_mode_active = True
+        return JSONResponse({"response": "Talking mode activated."})
+    else:
+        talking_mode_active = False
+        return JSONResponse({"response": "Talking mode deactivated."})
+
+@app.get("/talking_mode_status")
+async def talking_mode_status():
+    """
+    Polling endpoint to get the response while in talking mode.
+    """
+    if talking_mode_active:
+        user_input = waifu.get_user_input()
+        response = waifu.get_chatbot_response(user_input)
+        await waifu.tts_say(response)
+        return JSONResponse({"response": response})
+    return JSONResponse({"response": "Talking mode is not active."})
+
+# @app.post("/talking_mode")
+# async def talking_mode(talking_mode: bool = Form(...)):
+#     """
+#     Endpoint untuk mode percakapan suara dengan Waifu.
+#     """
+#     try:
+#         if talking_mode:
+#             user_input = waifu.get_user_input()  # Jika ini synchronous, tidak perlu await
+#             response = waifu.get_chatbot_response(user_input)  # Pastikan ini coroutine
+#             await waifu.tts_say(response)  # Pastikan ini coroutine
+#             return JSONResponse({"response": response})
+#         else:
+#             return JSONResponse({"response": "Voice Call Ended."})
+#     except Exception as e:
+#         logger.error(f"Error in talking_mode: {str(e)}")
+#         raise HTTPException(status_code=500, detail="Failed to toggle Voice Call.")
     
 @app.get("/status")
 async def status():

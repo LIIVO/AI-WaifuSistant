@@ -17,11 +17,11 @@
       <span class="text-red-500 text-lg font-bold">Character Placeholder</span>
     </div>
       <!-- Main Chat Section -->
-      <div class="flex-grow flex flex-col rounded-lg p-4 relative bg-gray-100">
+      <div class="flex-grow flex flex-col rounded-lg p-4 relative">
         <!-- Header -->
         <div class="group flex items-center justify-between bg-gray-300 p-4 rounded-t-lg" id="header">
-          <div id="profile" class="flex items-center space-x-3 cursor-pointer group-hover:select-none">
-            <div class="w-8 h-8 bg-gray-500 rounded-full cursor">
+          <div id="profile" class="flex items-center space-x-3 group-hover:select-none">
+            <div class="w-8 h-8 bg-gray-500 rounded-full">
               <img src="{{ url_for('static', path='img/active.png') }}" class="rounded-full">
             </div>
             <div>
@@ -30,9 +30,10 @@
               <script src="{{ url_for('static', path='function.js') }}"></script>
             </div>
           </div>
-          <button class="w-8 h-8 flex items-center justify-center">
+          <button id="voice-call-button" class="w-8 h-8 flex items-center justify-center">
             <span class="material-icons"><i class="fa-solid fa-phone"></i></span>
           </button>
+          <script src="{{ url_for('static', path='voicecall.js') }}"></script>
         </div>
   
         <!-- Chat Body -->
@@ -56,12 +57,12 @@
           </div>
         </div>
         </div>
-        <div id="sidebar" class="hidden w-1/4 bg-gray-300 flex items-center justify-center rounded-lg m-4">
-        </div>
+        <!-- <div id="sidebar" class="hidden w-1/4 bg-gray-300 flex items-center justify-center rounded-lg m-4">
+        </div> -->
       </div>
     </div>
     <script src="{{ url_for('static', path='function.js') }}"></script>
-    <script>
+    <!-- <script>
       // JavaScript to toggle sidebar visibility
       document.getElementById('profile').addEventListener('click', () => {
         const sidebar = document.getElementById('sidebar');
@@ -72,7 +73,7 @@
       document.getElementById('close-sidebar').addEventListener('click', () => {
         document.getElementById('sidebar').classList.add('hidden');
       });
-    </script>
+    </script> -->
   </body>
   
 </html>

@@ -398,3 +398,42 @@ AssertionError
 2024-12-29 10:57:58,362 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
 2024-12-29 11:11:44,519 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
 2024-12-29 11:24:01,357 - ERROR - Error getting chatbot response: Your IP is different than the locked one. Reset your IP lock at: http://discord.gg/zukijourney
+2024-12-30 08:00:40,264 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2024-12-30 08:00:54,982 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2024-12-30 08:05:27,559 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2024-12-30 08:43:13,337 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2024-12-30 09:00:37,076 - ERROR - Error getting chatbot response: Your IP is different than the locked one. Reset your IP lock at: http://discord.gg/zukijourney
+2025-01-01 07:49:06,861 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 07:53:33,067 - ERROR - Error getting chatbot response: Your IP is different than the locked one. Reset your IP lock at: http://discord.gg/zukijourney
+2025-01-01 07:54:31,252 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 08:17:36,805 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 08:26:39,092 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 08:26:57,608 - ERROR - Error in start_talking_mode: 
+2025-01-01 08:28:36,707 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 08:29:23,239 - ERROR - Error in start_talking_mode: This audio source is already inside a context manager
+2025-01-01 08:29:32,689 - ERROR - Error in start_talking_mode: This audio source is already inside a context manager
+2025-01-01 08:29:33,353 - ERROR - Error in start_talking_mode: This audio source is already inside a context manager
+2025-01-01 08:29:33,730 - ERROR - Error in start_talking_mode: This audio source is already inside a context manager
+2025-01-01 08:29:34,070 - ERROR - Error in start_talking_mode: This audio source is already inside a context manager
+2025-01-01 08:29:34,395 - ERROR - Error in start_talking_mode: This audio source is already inside a context manager
+2025-01-01 08:29:34,740 - ERROR - Error in start_talking_mode: This audio source is already inside a context manager
+2025-01-01 08:31:41,721 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 08:32:07,419 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 08:32:22,924 - ERROR - Error in start_talking_mode: 
+2025-01-01 08:35:48,625 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 08:37:34,579 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 08:38:28,042 - ERROR - Error in get_user_input: 
+2025-01-01 08:39:16,152 - ERROR - Error in get_user_input: 
+2025-01-01 08:44:52,117 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 08:45:53,834 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 08:54:19,165 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 08:57:13,649 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 08:58:18,675 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 08:58:23,303 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 08:59:24,564 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 09:01:12,535 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 09:09:24,344 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 09:15:29,385 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 09:19:43,054 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 09:21:04,828 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)
+2025-01-01 09:22:04,959 - ERROR - Error loading message history: Expecting value: line 1 column 1 (char 0)

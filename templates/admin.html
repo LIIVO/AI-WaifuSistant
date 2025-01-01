@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
 </head>
-<body class="bg-gray-100">
-    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+<body>
+    <nav id="nav-dash" class="fixed top-0 z-50 w-full">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
             <h1 class="text-lg font-bold text-gray-700 dark:text-white">AI-WaifuSistant Config's</h1>
         </div>
     </nav>
 
-    <aside class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+    <aside id="nav-dash" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20">
         <div class="h-full px-3 pb-4 overflow-y-auto">
             <ul class="space-y-2">
                 <li>

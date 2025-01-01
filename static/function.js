@@ -51,30 +51,6 @@ $('#send-button').click(function () {
     }
 });
 
-// Toggle Voice Call
-$('#voice-call-button').click(function() {
-    const isCalling = $(this).html().includes('fa-phone-slash'); // Check if the button currently shows the "End Call" icon
-
-    // Determine the new icon and action
-    const buttonIcon = isCalling 
-        ? '<span class="material-icons"><i class="fa-solid fa-phone"></i></span>' 
-        : '<span class="material-icons"><i class="fa-solid fa-phone-slash"></i></span>';
-
-    $.post('/talking_mode', { talking_mode: !isCalling })
-        .done(function(data) {
-            $('#voice-call-button').html(buttonIcon);
-
-            $('#chat-display').append(`
-                <div class="self-start bg-gray-300 p-3 rounded-lg max-w-xs">
-                    Waifu: ${data.response}
-                </div>
-            `);
-        })
-        .fail(function() {
-            alert('Error: Unable to toggle talking mode.');
-        });
-});
-
 // Function to update online status
 async function updateStatus() {
     try {
